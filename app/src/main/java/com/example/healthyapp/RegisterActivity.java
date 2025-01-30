@@ -61,6 +61,7 @@ public class RegisterActivity extends AppCompatActivity {
                 // Validate password strength
                 if (isValid(password)) {
                     Toast.makeText(getApplicationContext(), "Record Inserted", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
                     // Add your record insertion logic here
                 } else {
                     Toast.makeText(getApplicationContext(), "Password must contain at least 8 characters, including a letter, a digit, and a special character", Toast.LENGTH_SHORT).show();

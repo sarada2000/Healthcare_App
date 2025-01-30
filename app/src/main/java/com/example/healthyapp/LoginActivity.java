@@ -44,6 +44,7 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Please field All details", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(getApplicationContext(), "Login Success", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent((LoginActivity.this), homeActivity.class));
                 }
             }
         });
