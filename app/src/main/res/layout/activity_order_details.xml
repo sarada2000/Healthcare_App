@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#9CDBE2"
+    android:background="@drawable/backgroud"
     android:padding="16dp">
 
     <LinearLayout
@@ -10,204 +12,289 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <!-- Medicine Items -->
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="88dp"
+            android:layout_width="368dp"
+            android:layout_height="100dp"
             android:gravity="center"
             android:padding="8dp"
             android:text="Order Details"
-            android:textColor="#081261"
+            android:textColor="#050F54"
             android:textSize="24sp"
             android:textStyle="bold" />
 
-
-        <!-- order Items -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="548dp"
+            android:layout_height="466dp"
             android:layout_marginTop="16dp"
             android:orientation="vertical">
 
             <!-- Item 1 -->
-
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="149dp"
+                android:layout_height="109dp"
                 android:layout_marginHorizontal="4dp"
                 android:layout_marginBottom="12dp"
-                android:background="#D8EFFF"
+                android:background="#A6C3D7"
+                android:baselineAligned="false"
                 android:orientation="horizontal"
                 android:padding="8dp">
 
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/img_1" />
 
-                <LinearLayout
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:orientation="horizontal">
 
                     <TextView
+                        android:id="@+id/text1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Paracetamol"
+                        android:text="Packege 01"
                         android:textColor="#0B0B0B"
                         android:textSize="20sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="HardcodedText" />
 
                     <TextView
+                        android:id="@+id/Des_text1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:text="Relief from fever and pain"
+                        android:text="Mr.Kamal "
                         android:textColor="#0B0B0B"
-                        android:textSize="16sp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="vertical">
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/text1" />
 
                     <TextView
+                        android:id="@+id/Pricetext1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="4dp"
-                        android:text="Rs.10/="
-                        android:textColor="#071C37"
-                        android:textSize="16sp" />
-
-                    <Button
-                        android:id="@+id/btnBuy1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:backgroundTint="#FF5252"
-                        android:text="Buy"
-                        android:textColor="#FFFFFF" />
-                </LinearLayout>
-            </LinearLayout>
-
-            <!-- Item 3 -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="155dp"
-                android:layout_marginHorizontal="4dp"
-                android:layout_marginBottom="12dp"
-                android:background="#D8EFFF"
-                android:orientation="horizontal"
-                android:padding="8dp">
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Ibuprofen"
-                        android:textColor="#0B0B0B"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:text="Pain relief and anti-inflammatory"
-                        android:textColor="#050505"
-                        android:textSize="16sp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="4dp"
-                        android:text="Rs.13/="
-                        android:textColor="#0C0C0D"
-                        android:textSize="16sp" />
-
-                    <Button
-                        android:id="@+id/btnBuy2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:backgroundTint="#FF5252"
-                        android:text="Buy"
-                        android:textColor="#FFFFFF" />
-                </LinearLayout>
-            </LinearLayout>
-
-            <!-- Item 3 -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="172dp"
-                android:layout_marginHorizontal="4dp"
-                android:layout_marginBottom="12dp"
-                android:background="#D8EFFF"
-                android:orientation="horizontal"
-                android:padding="8dp">
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Amoxicillin"
-                        android:textColor="#0B0B0B"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:text="Antibiotic for infections"
+                        android:text="Full Body Checkup, Peracetomol 500mg 12 card "
+                        android:textAlignment="viewStart"
                         android:textColor="#090909"
-                        android:textSize="16sp" />
-                </LinearLayout>
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/Des_text1" />
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="vertical">
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <!-- Item 2 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="4dp"
+                android:layout_marginBottom="12dp"
+                android:background="#A6C3D7"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/img_1" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="86dp"
+                    android:layout_weight="1">
 
                     <TextView
+                        android:id="@+id/text2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="4dp"
-                        android:text="Rs.15/="
-                        android:textColor="#070707"
-                        android:textSize="16sp" />
+                        android:text="Packege 02"
+                        android:textColor="#0B0B0B"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="HardcodedText" />
 
-                    <Button
-                        android:id="@+id/btnBuy3"
+                    <TextView
+                        android:id="@+id/Des_text2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:backgroundTint="#FF5252"
-                        android:text="Buy"
-                        android:textColor="#FFFFFF" />
-                </LinearLayout>
+                        android:text="Mrs.Sunetha"
+                        android:textColor="#0B0B0B"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/text2" />
+
+                    <TextView
+                        android:id="@+id/Pricetext2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Full Body Checkup, Peracetomol 500mg  card "
+                        android:textColor="#071C37"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/Des_text2"
+                        tools:ignore="HardcodedText" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
             </LinearLayout>
+
+            <!-- 3 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="4dp"
+                android:layout_marginBottom="12dp"
+                android:background="#A6C3D7"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/img_1" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="93dp"
+                    android:layout_weight="1"
+                    tools:ignore="TextSizeCheck">
+
+                    <TextView
+                        android:id="@+id/text3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Packege 03"
+                        android:textColor="#0B0B0B"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/Des_text3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="134dp"
+                        android:text="Mr.Wikramasingha"
+                        android:textColor="#0B0B0B"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toTopOf="@+id/Pricetext3"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/text3" />
+
+                    <TextView
+                        android:id="@+id/Pricetext3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Full Body Checkup, Peracetomol 500mg card "
+                        android:textColor="#071C37"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/Des_text3" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <!---**4** -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_marginHorizontal="4dp"
+                android:layout_marginBottom="12dp"
+                android:background="#A6C3D7"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                tools:ignore="DisableBaselineAlignment">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/img_1" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/text4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Packege 04"
+                        android:textColor="#0B0B0B"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/Des_text4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Miss.Naduni"
+                        android:textColor="#0B0B0B"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/text4" />
+
+                    <TextView
+                        android:id="@+id/meditext4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Full Body Checkup, Peracetomol 500mg card "
+                        android:textColor="#071C37"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/Des_text4" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearLayout"
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center">
 
             <Button
-                android:id="@+id/button5"
-                android:layout_width="match_parent"
-                android:layout_height="36dp"
-                android:text="Back" />
-        </LinearLayout>
+                android:id="@+id/btnBack1"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="136dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="143dp"
+                android:backgroundTint="#253856"
+                android:text="Back"
+                android:textColor="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="VisualLintButtonSize" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
 
