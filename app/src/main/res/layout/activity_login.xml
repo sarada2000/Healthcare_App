@@ -5,9 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity"
     android:background="@drawable/login_b"
-    >
+    tools:context=".LoginActivity">
 
     <EditText
         android:id="@+id/editTextUsername"
@@ -82,6 +81,8 @@
         android:layout_width="253dp"
         android:layout_height="49dp"
         android:layout_marginBottom="244dp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="#253856"
         android:text="Login"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -105,3 +106,4 @@
         app:layout_constraintTop_toBottomOf="@+id/button3Login"
         app:layout_constraintVertical_bias="0.084" />
 </androidx.constraintlayout.widget.ConstraintLayout>
+
