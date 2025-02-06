@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/h_bg"
     tools:context=".FindDoctorsActivity">
@@ -22,9 +22,15 @@
         android:textStyle="bold" />
 
     <GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="20dp"
+        android:layout_width="382dp"
+        android:layout_height="553dp"
+        android:layout_below="@+id/titleHome"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
         android:columnCount="2"
         android:rowCount="3">
 
