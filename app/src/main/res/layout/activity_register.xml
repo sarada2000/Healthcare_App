@@ -106,6 +106,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextRegPassword"
         app:layout_constraintVertical_bias="0.041" />
 
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="273dp"
@@ -120,10 +121,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.542"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.024" />
-
+        app:layout_constraintVertical_bias="0.038" />
 
     <Button
         android:id="@+id/buttonRegister"
@@ -131,13 +132,12 @@
         android:layout_height="49dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="244dp"
-        android:background="@drawable/rounded_button"
         android:backgroundTint="#253856"
         android:backgroundTintMode="add"
         android:text="Register"
         android:textColor="@color/colorWhite"
         android:textColorLink="#253856"
-        android:textSize="16sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -145,7 +145,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextRegConfirmPassword"
         app:layout_constraintVertical_bias="0.475" />
-
 
 
     <TextView
@@ -161,17 +160,17 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.53"
+        app:layout_constraintHorizontal_bias="0.435"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonRegister"
-        app:layout_constraintVertical_bias="0.372" />
+        app:layout_constraintVertical_bias="0.134" />
 
     <TextView
         android:id="@+id/textViewTitle"
         android:layout_width="212dp"
         android:layout_height="46dp"
-        android:text="Registration"
-        android:textColor="@color/purpleDark"
+        android:text="Registation"
+        android:textColor="@color/material_dynamic_tertiary20"
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
