@@ -1,5 +1,6 @@
 package com.example.healthyapp;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
@@ -13,9 +14,10 @@ public class BuyMedicine extends AppCompatActivity {
     Button btnBuy2;
     Button btnBuy3;
     Button btnBuy4;
-    Button btnBack;
+    Button btn_back1;
     Button btnCart;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,15 +46,15 @@ public class BuyMedicine extends AppCompatActivity {
         );
 
         // Back button functionality
-        btnBack = findViewById(R.id.btnBack1); // Assuming you have a "Home" button in your layout
-        btnBack.setOnClickListener(v -> {
+        btn_back1 = findViewById(R.id.btn_back1); // Assuming you have a "Home" button in your layout
+        btn_back1.setOnClickListener(v -> {
             // Moving to Home Activity
             Intent homeIntent = new Intent(BuyMedicine.this, MainActivity.class);
             startActivity(homeIntent);
         });
 
-        // Cart button functionality
-        btnCart = findViewById(R.id.checkout_btn); // Assuming you have a "Cart" button in your layout
+        //Go to Cart button functionality
+        btnCart = findViewById(R.id.btnCart); // Assuming you have a "Cart" button in your layout
         btnCart.setOnClickListener(v -> {
             // Moving to Cart Activity
             Intent cartIntent = new Intent(BuyMedicine.this, CartActivity.class);

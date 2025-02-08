@@ -14,6 +14,17 @@
 
         <!-- Interface Name -->
 
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:fontFamily="sans-serif"
+            android:text="Health Care"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -21,19 +32,19 @@
 
             <TextView
                 android:layout_width="234dp"
-                android:layout_height="100dp"
+                android:layout_height="wrap_content"
                 android:padding="8dp"
-                android:text="                                                                 MY CART"
+                android:text="MY CART"
                 android:textAlignment="textEnd"
                 android:textColor="#091666"
-                android:textSize="24sp"
+                android:textSize="32sp"
                 android:textStyle="bold" />
 
             <ImageView
                 android:id="@+id/cart"
                 android:layout_width="114dp"
                 android:layout_height="50dp"
-                android:layout_gravity="center_vertical"
+                android:layout_gravity="center_horizontal"
                 android:layout_weight="1"
                 android:contextClickable="true"
                 android:isScrollContainer="false"
@@ -41,6 +52,7 @@
 
         </LinearLayout>
 
+        <!-- **Add to Cart & Back Button Section** -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="466dp"
@@ -65,8 +77,8 @@
                     android:src="@drawable/pack" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="0dp"
-                    android:layout_height="96dp"
+                    android:layout_width="266dp"
+                    android:layout_height="79dp"
                     android:layout_weight="1"
                     android:orientation="horizontal">
 
@@ -96,24 +108,6 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/text1" />
 
-                    <TextView
-                        android:id="@+id/Pricetext1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="148dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginBottom="17dp"
-                        android:text="Rs.1800/="
-                        android:textColor="#0D0D0D"
-                        android:textSize="17sp"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.601"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/Des_text1"
-                        app:layout_constraintVertical_bias="0.0" />
-
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
             </LinearLayout>
@@ -136,14 +130,14 @@
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="0dp"
-                    android:layout_height="86dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1">
 
                     <TextView
                         android:id="@+id/text2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Lab Test Fee"
+                        android:text="Lab Test Report"
                         android:textColor="#0B0B0B"
                         android:textSize="20sp"
                         android:textStyle="bold"
@@ -160,20 +154,6 @@
                         android:textSize="16sp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/text2" />
-
-                    <TextView
-                        android:id="@+id/Pricetext2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="192dp"
-                        android:layout_marginTop="4dp"
-                        android:text="Rs.2400/="
-                        android:textColor="#0B0B0B"
-                        android:textSize="17sp"
-                        android:textStyle="bold"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/Des_text2"
-                        tools:ignore="HardcodedText" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -246,10 +226,8 @@
 
             </LinearLayout>
 
-
         </LinearLayout>
 
-        <!-- **Add to Cart & Back Button Section** -->
         <LinearLayout
             style="?android:attr/buttonBarStyle"
             android:layout_width="match_parent"
@@ -259,7 +237,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/btnBack1"
+                android:id="@+id/btnBack"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -270,7 +248,7 @@
                 tools:ignore="VisualLintButtonSize" />
 
             <Button
-                android:id="@+id/checkout_btn"
+                android:id="@+id/check_outbtn"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
