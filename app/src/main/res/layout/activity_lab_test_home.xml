@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/h_bg"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".LabTestHomeActivity">
+
+    <!-- Lab Image -->
+    <ImageView
+        android:id="@+id/labImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/lab_image" />
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="serif"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="Available Lab Tests"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- List of Lab Tests -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewLabTests"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_blue"
+        android:padding="8dp"
+        android:scrollbars="vertical" />
+
+    <!-- Book a Lab Test Button -->
+    <Button
+        android:id="@+id/btnBookLabTest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_button"
+        android:text="Book a Lab Test"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:textColor="@android:color/white" />
+
+    <!-- View Past Test Results Button -->
+    <Button
+        android:id="@+id/btnViewPastResults"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_button"
+        android:text="View Past Test Results"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:textColor="@android:color/white" />
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_button"
+        android:text="Back"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>
