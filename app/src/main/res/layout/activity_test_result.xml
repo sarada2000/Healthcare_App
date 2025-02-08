@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/h_bg"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".TestResultActivity">
+
+    <ImageView
+        android:id="@+id/labImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/test_result_image" />
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="serif"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="View Test Results"
+        android:textColor="@color/dark_gray"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- RecyclerView for Test Results -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewTestResults"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_blue"
+        android:padding="8dp"
+        android:scrollbars="vertical"/>
+
+    <!-- Back Button -->
+    <Button
+        android:id="@+id/btnBackToHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rounded_button"
+        android:text="Back to Home"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:textColor="@android:color/white"/>
+
+</LinearLayout>

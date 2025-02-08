@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
+
     <color name="white">#FFFFFFFF</color>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
@@ -17,6 +18,14 @@
     <color name="yellowLight">#FFF777</color>
     <color name="light_blue">#E0F7FA</color>
     <color name="dark_blue">#001945</color>
+
+
+    <color name="white">#FFFFFFFF</color
+    <color name="light_blue">#E0F7FA</color>
+    <color name="dark_gray">#666666</color>
+    <color name="dark_red">#BF1010</color>
+    <color name="dark_gray">#666666</color>
+    <color name="light_blue">#E0F7FA</color>
 
 
 </resources>
