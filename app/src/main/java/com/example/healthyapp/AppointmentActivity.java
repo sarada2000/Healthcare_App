@@ -122,7 +122,7 @@ public class AppointmentActivity extends AppCompatActivity {
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AppointmentActivity.this, FindDoctorsActivity.class);
+                Intent intent = new Intent(AppointmentActivity.this, DoctorListActivity.class);
                 startActivity(intent);
             }
         });

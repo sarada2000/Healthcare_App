@@ -25,7 +25,7 @@ public class DoctorListActivity extends AppCompatActivity {
         exit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(DoctorListActivity.this, FindDoctorsActivity.class);
+                Intent intent = new Intent(DoctorListActivity.this, homeActivity.class);
                 startActivity(intent);
             }
 

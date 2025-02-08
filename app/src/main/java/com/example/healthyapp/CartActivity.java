@@ -25,7 +25,7 @@ public class CartActivity extends AppCompatActivity {
         btnBack = findViewById(R.id.btnBack); // Assuming you have a "Home" button in your layout
         btnBack.setOnClickListener(v -> {
             // Moving to Home Activity
-            Intent homeIntent = new Intent(CartActivity.this, OrderDetails.class);
+            Intent homeIntent = new Intent(CartActivity.this, homeActivity.class);
             startActivity(homeIntent);
         });
 

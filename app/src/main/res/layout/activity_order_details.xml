@@ -31,10 +31,7 @@
             android:padding="8dp"
             android:text="Order Details"
             android:textColor="#050F54"
-
             android:textSize="34sp"
-
-            android:textSize="32sp"
             android:textStyle="bold" />
 
         <LinearLayout
