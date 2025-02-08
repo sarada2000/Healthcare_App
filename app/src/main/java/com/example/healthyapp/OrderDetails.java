@@ -21,7 +21,7 @@ public class OrderDetails extends AppCompatActivity {
         btn_back = findViewById(R.id.btn_back);
         btn_back.setOnClickListener(v -> {
             // Moving to Home Activity
-            Intent homeIntent = new Intent(OrderDetails.this, BuyMedicine.class);
+            Intent homeIntent = new Intent(OrderDetails.this, homeActivity.class);
             startActivity(homeIntent);
         });
 

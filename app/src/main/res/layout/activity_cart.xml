@@ -171,7 +171,8 @@
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:background="@color/light_blue">
 
                     <TextView
                         android:id="@+id/textDis"
@@ -242,9 +243,12 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:background="@drawable/rounded_button"
                 android:backgroundTint="#253856"
                 android:text="Back"
                 android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"
                 tools:ignore="VisualLintButtonSize" />
 
             <Button
@@ -253,9 +257,12 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:background="@drawable/rounded_button"
                 android:backgroundTint="#253856"
                 android:text="Check out"
                 android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"
                 tools:ignore="VisualLintButtonSize" />
 
         </LinearLayout>

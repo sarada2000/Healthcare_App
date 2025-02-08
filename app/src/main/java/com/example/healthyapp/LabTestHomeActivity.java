@@ -19,7 +19,7 @@ public class LabTestHomeActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private LabTestsAdapter adapter;
     private List<LabTest> labTestsList;
-    private Button btnBookLabTest, btnViewPastResults;
+    private Button btnBookLabTest, btnViewPastResults, btnBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +30,7 @@ public class LabTestHomeActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerViewLabTests);
         btnBookLabTest = findViewById(R.id.btnBookLabTest);
         btnViewPastResults = findViewById(R.id.btnViewPastResults);
+        btnBack = findViewById(R.id.btnBack);
 
         // Sample Lab Tests Data
         labTestsList = new ArrayList<>();
@@ -51,6 +52,11 @@ public class LabTestHomeActivity extends AppCompatActivity {
 
         btnViewPastResults.setOnClickListener(v -> {
             Intent intent = new Intent(LabTestHomeActivity.this, TestResultActivity.class);
+            startActivity(intent);
+        });
+
+        btnBack.setOnClickListener(v -> {
+            Intent intent = new Intent(LabTestHomeActivity.this, homeActivity.class);
             startActivity(intent);
         });
     }

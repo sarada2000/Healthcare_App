@@ -49,7 +49,7 @@ public class BuyMedicine extends AppCompatActivity {
         btn_back1 = findViewById(R.id.btn_back1); // Assuming you have a "Home" button in your layout
         btn_back1.setOnClickListener(v -> {
             // Moving to Home Activity
-            Intent homeIntent = new Intent(BuyMedicine.this, MainActivity.class);
+            Intent homeIntent = new Intent(BuyMedicine.this, homeActivity.class);
             startActivity(homeIntent);
         });
 

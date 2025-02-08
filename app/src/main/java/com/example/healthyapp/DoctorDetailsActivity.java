@@ -22,7 +22,7 @@ public class DoctorDetailsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Navigate to the next activity
-                Intent intent = new Intent(DoctorDetailsActivity.this, FindDoctorsActivity.class);
+                Intent intent = new Intent(DoctorDetailsActivity.this, homeActivity.class);
                 startActivity(intent);
             }
         });

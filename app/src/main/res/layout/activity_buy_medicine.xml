@@ -232,17 +232,14 @@
                         android:id="@+id/btnBuy3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-
-                        android:layout_marginStart="96dp"
-
                         android:layout_marginStart="127dp"
                         android:layout_marginEnd="16dp"
-
                         android:backgroundTint="#BF1010"
                         android:text="Add To Cart"
                         android:textColor="#FFFFFF"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/Des_text3"
                         app:layout_constraintVertical_bias="1.0" />
@@ -329,10 +326,12 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@color/black"
+                android:background="@drawable/rounded_button"
                 android:backgroundTint="#253856"
                 android:text="Back"
                 android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"
                 tools:ignore="VisualLintButtonSize" />
 
             <Button
@@ -341,11 +340,12 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@color/dark_blue"
+                android:background="@drawable/rounded_button"
                 android:backgroundTint="#253856"
                 android:text="Go to Cart"
                 android:textColor="#FFFFFF"
-                android:textSize="14sp"
+                android:textSize="18sp"
+                android:textStyle="bold"
                 tools:ignore="VisualLintButtonSize" />
 
         </LinearLayout>
