@@ -12,6 +12,7 @@ import androidx.cardview.widget.CardView;
 
 public class homeActivity extends AppCompatActivity {
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,7 +21,7 @@ public class homeActivity extends AppCompatActivity {
 
         // Find the Logout button
         @SuppressLint({"MissingInflatedId", "LocalSuppress"}) Button logoutButton;
-        logoutButton = findViewById(R.id.button3);
+        logoutButton = findViewById(R.id.btnButton3);
 
         // Set click listener for logout button
         logoutButton.setOnClickListener(new View.OnClickListener() {

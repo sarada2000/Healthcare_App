@@ -71,5 +71,14 @@ public class DoctorDetailsActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        Button btnAppoinment6 = findViewById(R.id.btn_appoinment6);
+        btnAppoinment6.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                // Navigate to the next activity
+                Intent intent = new Intent(DoctorDetailsActivity.this, AppointmentActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
