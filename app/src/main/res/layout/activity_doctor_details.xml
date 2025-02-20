@@ -115,7 +115,7 @@
                     android:contentDescription="Doctor Image"
                     android:padding="5dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/d_avator" />
+                    android:src="@drawable/fp_image2" />
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -126,7 +126,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Dr. Sarah Smith"
+                        android:text="Dr. Sara Smith"
                         android:textColor="@color/material_dynamic_primary10"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -377,6 +377,75 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/light_blue"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="10dp"
+                    android:background="@android:color/white"
+                    android:contentDescription="Doctor Image"
+                    android:padding="5dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/d_avator" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dr.Ravi Perera"
+                        android:textColor="@color/material_dynamic_neutral_variant10"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#F8F5F5"
+                        android:paddingBottom="5dp"
+                        android:text="Neurologist"
+                        android:textColor="@color/design_default_color_on_secondary"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#F8F5F5"
+                        android:paddingBottom="5dp"
+                        android:text="A neurologist expert with over 15 years of expertise in treating brain and nerve disorders. He specializes in diagnosing and managing conditions such as strokes, epilepsy, and migraines.  "
+                        android:textColor="@color/material_dynamic_tertiary30"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/btn_appoinment6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end"
+                        android:background="@drawable/rounded_button"
+                        android:text="Appoinment"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
@@ -393,6 +462,7 @@
                     android:textStyle="bold" />
             </LinearLayout>
         </LinearLayout>
+
     </ScrollView>
 
 </RelativeLayout>

@@ -3,17 +3,15 @@ package com.example.healthyapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-
-import java.util.concurrent.Callable;
 
 public class DoctorListActivity extends AppCompatActivity {
+
+    private Button btnBackDoctor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,11 +19,21 @@ public class DoctorListActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_doctor_list);
 
-        CardView exit = findViewById(R.id.cardback);
-        exit.setOnClickListener(new View.OnClickListener() {
+        Button btnBackDoctor = findViewById(R.id.btnBackDoctor);
+        btnBackDoctor.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                // Navigate to the next activity
+                Intent intent = new Intent(DoctorListActivity.this, homeActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        CardView Neurologist = findViewById(R.id.cardNeurologist);
+        Neurologist.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(DoctorListActivity.this, homeActivity.class);
+                Intent intent = new Intent(DoctorListActivity.this, DoctorDetailsActivity.class);
                 startActivity(intent);
             }
 

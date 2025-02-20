@@ -44,7 +44,7 @@ public class AppointmentActivity extends AppCompatActivity {
         Spinner doctorSpinner = findViewById(R.id.spinner_doctors);
 
         // List of doctors
-        String[] doctors = {"Dr. John Doe - Family Physicion", "Dr. Sarah Smith - Dentist", "Dr. Alex Brown - Surgeon", "Dr. Michel Lee - Dietician", "Dr. Selie Fernando - Cardiologist"};
+        String[] doctors = {"Dr. John Doe - Family Physicion", "Dr. Sarah Smith - Dentist", "Dr. Alex Brown - Surgeon", "Dr. Michel Lee - Dietician", "Dr. Selie Fernando - Cardiologist", "Dr. Selie Fernando - Cardiologist", "Dr.Ravi Perera - Neurologist"};
 
         // Create Adapter
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, doctors);
