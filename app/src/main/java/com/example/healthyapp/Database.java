@@ -18,6 +18,13 @@ public class Database extends SQLiteOpenHelper {
         String qry1 = "create table users(username text,email text,password text)";
         sqLiteDatabase.execSQL(qry1);
 
+        String qry2 = "CREATE TABLE booklabtest(id INTEGER PRIMARY KEY AUTOINCREMENT, testname TEXT, date TEXT, patientname TEXT, contact TEXT)";
+        sqLiteDatabase.execSQL(qry2);
+
+        String qry3 = "CREATE TABLE appointments(id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, age TEXT, address TEXT, contact TEXT, doctor TEXT, date TEXT, time TEXT)";
+        sqLiteDatabase.execSQL(qry3);
+
+
     }
 
     @Override
@@ -47,5 +54,37 @@ public class Database extends SQLiteOpenHelper {
         }
         return result;
     }
+
+    // Book Lab Test Method
+    public void bookLabTest(String testName, String date, String patientName, String contact) {
+        ContentValues cv = new ContentValues();
+        cv.put("testname", testName);
+        cv.put("date", date);
+        cv.put("patientname", patientName);
+        cv.put("contact", contact);
+
+        SQLiteDatabase db = getWritableDatabase();
+        db.insert("booklabtest", null, cv);
+        db.close();
+    }
+
+    public void bookAppointment(String name, String age, String address, String contact, String doctor, String date, String time) {
+        ContentValues cv = new ContentValues();
+        cv.put("name", name);
+        cv.put("age", age);
+        cv.put("address", address);
+        cv.put("contact", contact);
+        cv.put("doctor", doctor);
+        cv.put("date", date);
+        cv.put("time", time);
+
+        SQLiteDatabase db = getWritableDatabase();
+        db.insert("appointments", null, cv);
+        db.close();
+    }
+
+
+
+
 
 }

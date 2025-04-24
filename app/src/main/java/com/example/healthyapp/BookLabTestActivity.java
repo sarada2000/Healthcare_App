@@ -12,6 +12,8 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.example.healthyapp.Database;
+
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -93,8 +95,13 @@ public class BookLabTestActivity extends AppCompatActivity {
             return;
         }
 
-        // Show confirmation message
+        // Save booking to database
+        Database db = new Database(getApplicationContext(), "healthycare", null, 1);
+        db.bookLabTest(selectedTest, selectedDate, patientName, contactNumber);
+
+        // Confirmation message
         String confirmationMessage = "Test: " + selectedTest + "\nDate: " + selectedDate + "\nPatient: " + patientName + "\nContact: " + contactNumber;
         Toast.makeText(this, "Booking Confirmed!\n\n" + confirmationMessage, Toast.LENGTH_LONG).show();
     }
+
 }
