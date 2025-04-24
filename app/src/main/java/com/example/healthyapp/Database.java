@@ -24,6 +24,9 @@ public class Database extends SQLiteOpenHelper {
         String qry3 = "CREATE TABLE appointments(id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, age TEXT, address TEXT, contact TEXT, doctor TEXT, date TEXT, time TEXT)";
         sqLiteDatabase.execSQL(qry3);
 
+        String qry4 = "CREATE TABLE BuyMedicine(medicine string, name TEXT, price TEXT)";
+        sqLiteDatabase.execSQL(qry4);
+
 
     }
 
