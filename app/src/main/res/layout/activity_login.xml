@@ -64,7 +64,7 @@
         android:layout_height="73dp"
         android:fontFamily="sans-serif-black"
         android:text="Health Care"
-        android:textColor="@color/colorBlack"
+        android:textColor="@color/colorWhite"
         android:textColorHighlight="#161313"
         android:textColorHint="#1A1515"
         android:textColorLink="#F44336"
