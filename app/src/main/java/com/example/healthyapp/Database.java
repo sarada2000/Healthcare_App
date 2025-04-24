@@ -68,6 +68,18 @@ public class Database extends SQLiteOpenHelper {
         db.close();
     }
 
+    public boolean updateLabTest(String testName, String date, String patientName, String contact) {
+        ContentValues cv = new ContentValues();
+        cv.put("testname", testName);
+        cv.put("date", date);
+        cv.put("contact", contact);
+
+        SQLiteDatabase db = getWritableDatabase();
+        int result = db.update("booklabtest", cv, "patientname = ?", new String[]{patientName});
+        db.close();
+        return result > 0;
+    }
+
     public void bookAppointment(String name, String age, String address, String contact, String doctor, String date, String time) {
         ContentValues cv = new ContentValues();
         cv.put("name", name);
