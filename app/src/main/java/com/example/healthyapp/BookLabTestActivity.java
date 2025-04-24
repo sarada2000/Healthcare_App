@@ -12,8 +12,6 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.example.healthyapp.Database;
-
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -24,7 +22,7 @@ public class BookLabTestActivity extends AppCompatActivity {
     private Spinner spinnerLabTests;
     private TextView tvSelectedDate;
     private EditText etPatientName, etContactNumber;
-    private Button btnSelectDate, btnSubmitBooking, btnBookBack;
+    private Button btnSelectDate, btnSubmitBooking, btnBookBack, btnUpdateBooking;
     private String selectedTest, selectedDate;
 
     @Override
@@ -40,16 +38,16 @@ public class BookLabTestActivity extends AppCompatActivity {
         btnSelectDate = findViewById(R.id.btnSelectDate);
         btnSubmitBooking = findViewById(R.id.btnSubmitBooking);
         btnBookBack = findViewById(R.id.btnBookBack);
+        btnUpdateBooking = findViewById(R.id.btnUpdateBooking); // New Update Button
 
-        // Inside onCreate method
+        // Back to Lab Home
         btnBookBack.setOnClickListener(view -> {
             Intent intent = new Intent(BookLabTestActivity.this, LabTestHomeActivity.class);
             startActivity(intent);
-            finish();  // Optional: finish the current activity to remove it from the back stack
+            finish();
         });
 
-
-        // Set up Spinner for Lab Tests
+        // Lab Tests Spinner Setup
         String[] labTests = {"Complete Blood Count (CBC)", "Lipid Profile", "Blood Sugar Test", "Thyroid Function Test"};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, labTests);
         spinnerLabTests.setAdapter(adapter);
@@ -61,7 +59,8 @@ public class BookLabTestActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onNothingSelected(AdapterView<?> parent) {}
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
         });
 
         // Date Picker
@@ -70,6 +69,8 @@ public class BookLabTestActivity extends AppCompatActivity {
         // Submit Booking
         btnSubmitBooking.setOnClickListener(view -> submitBooking());
 
+        // Update Booking
+        btnUpdateBooking.setOnClickListener(view -> updateBooking());
     }
 
     private void showDatePicker() {
@@ -95,13 +96,27 @@ public class BookLabTestActivity extends AppCompatActivity {
             return;
         }
 
-        // Save booking to database
         Database db = new Database(getApplicationContext(), "healthycare", null, 1);
         db.bookLabTest(selectedTest, selectedDate, patientName, contactNumber);
 
-        // Confirmation message
         String confirmationMessage = "Test: " + selectedTest + "\nDate: " + selectedDate + "\nPatient: " + patientName + "\nContact: " + contactNumber;
         Toast.makeText(this, "Booking Confirmed!\n\n" + confirmationMessage, Toast.LENGTH_LONG).show();
     }
 
+    private void updateBooking() {
+        String patientName = etPatientName.getText().toString().trim();
+        String contactNumber = etContactNumber.getText().toString().trim();
+
+        if (patientName.isEmpty() || contactNumber.isEmpty() || selectedDate == null) {
+            Toast.makeText(this, "Please fill all details to update!", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        Database db = new Database(getApplicationContext(), "healthycare", null, 1);
+        boolean success = db.updateLabTest(selectedTest, selectedDate, patientName, contactNumber);
+        if (success) {
+            Toast.makeText(this, "Booking Updated!", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "Update Failed!", Toast.LENGTH_SHORT).show();
+        }
+    }
 }
