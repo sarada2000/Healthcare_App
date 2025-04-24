@@ -113,11 +113,16 @@ public class AppointmentActivity extends AppCompatActivity {
                 if (name.isEmpty() || age.isEmpty() || address.isEmpty() || contact.isEmpty() || date.equals("Selected Date: ") || time.equals("Selected Time: ")) {
                     Toast.makeText(AppointmentActivity.this, "Please fill all fields", Toast.LENGTH_SHORT).show();
                 } else {
+                    Spinner doctorSpinner = findViewById(R.id.spinner_doctors);
+                    String doctor = doctorSpinner.getSelectedItem().toString();
+
+                    Database db = new Database(AppointmentActivity.this, "healthcare", null, 1);
+                    db.bookAppointment(name, age, address, contact, doctor, date, time);
+
                     Toast.makeText(AppointmentActivity.this, "Appointment Booked Successfully!", Toast.LENGTH_LONG).show();
                 }
             }
         });
-
         // Back Button
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
